@@ -49,13 +49,14 @@ $total2 = mysqli_num_rows($dados2);
             <button type="submit" id="cadastrar" name="cadastrar">Cadastrar</button>
         </form>
         <br>
-        
+
         <!-Lista principal–>
             <h3 align="center">Lista Principal</h3>
-            <table width="300" border="1" align="center">
+            <table width="500" border="1" align="center">
                 <tr>
                     <th align="center">Nome Completo</th>
                     <th align="center">Status</th>
+                    <th align="center">Ação</th>
                 </tr>
                 <?php if ($total > 0) { ?>
                     <?php do { ?>
@@ -64,6 +65,7 @@ $total2 = mysqli_num_rows($dados2);
                             <td width="35%" align="center">
                                 <font color="green"><strong>Confirmado</strong></font>
                             </td>
+                            <td> <button type="submit" id="cadastrar" name="cadastrar">Remover</button></td>
                     <?php } while ($linha = mysqli_fetch_assoc($dados));
 
                     // tira o resultado da busca da memória
@@ -73,10 +75,11 @@ $total2 = mysqli_num_rows($dados2);
             </table>
             <!-Em Espera–>
                 <h3 align="center">Em Espera</h3>
-                <table width="300" border="1" align="center">
+                <table width="500" border="1" align="center">
                     <tr>
                         <th align="center">Nome Completo</th>
                         <th align="center">Status</th>
+                        <th align="center">Ação</th>
                         <?php if ($total1 > 0) { ?>
                             <?php do { ?>
                     <tr>
@@ -84,16 +87,18 @@ $total2 = mysqli_num_rows($dados2);
                         <td width="35%" align="center">
                             <font color="blue"><strong>Aguardando</strong></font>
                         </td>
+                        <td> <button type="submit" id="cadastrar" name="cadastrar">Remover</button></td>
                 <?php } while ($linha1 = mysqli_fetch_assoc($dados1));
                         } ?>
                 </table>
 
                 <!-Cacelados>
                     <h3 align="center">Agendamento cancelado</h3>
-                    <table width="300" border="1" align="center">
+                    <table width="500" border="1" align="center">
                         <tr>
                             <th align="center">Nome Completo</th>
                             <th align="center">Status</th>
+                            <th align="center">Ação</th>
                             <?php if ($total2 > 0) { ?>
                                 <?php do { ?>
                         <tr>
@@ -101,6 +106,7 @@ $total2 = mysqli_num_rows($dados2);
                             <td width="35%" align="center">
                                 <font color="red"><strong>Cancelado</strong></font>
                             </td>
+                            <td> <button type="submit" id="cadastrar" name="cadastrar">Restaurar</button></td>
                     <?php } while ($linha2 = mysqli_fetch_assoc($dados2));
                             } ?>
                     </table>

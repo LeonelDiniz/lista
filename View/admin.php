@@ -49,7 +49,6 @@ $total2 = mysqli_num_rows($dados2);
             <button type="submit" id="cadastrar" name="cadastrar">Cadastrar</button>
         </form>
         <br>
-
         <!-Lista principal–>
             <h3 align="center">Lista Principal</h3>
             <table width="500" border="1" align="center">
@@ -65,11 +64,12 @@ $total2 = mysqli_num_rows($dados2);
                             <td width="35%" align="center">
                                 <font color="green"><strong>Confirmado</strong></font>
                             </td>
-                            <td> <button type="submit" id="cadastrar" name="cadastrar">Remover</button></td>
-                    <?php } while ($linha = mysqli_fetch_assoc($dados));
 
-                    // tira o resultado da busca da memória
-                    mysqli_free_result($dados);
+                            <form method="post" name="remover" id="remover" action="../Model/removeLista.php">
+                                <td><button type="submit" id="remover" name="remover" value="<?php echo $linha['id'] ?>">Remover</button></td>
+                            </form>
+
+                    <?php } while ($linha = mysqli_fetch_assoc($dados));
                 } ?>
                         </tr>
             </table>
@@ -87,11 +87,13 @@ $total2 = mysqli_num_rows($dados2);
                         <td width="35%" align="center">
                             <font color="blue"><strong>Aguardando</strong></font>
                         </td>
-                        <td> <button type="submit" id="cadastrar" name="cadastrar">Remover</button></td>
+
+                        <form method="post" name="remover" id="remover" action="../Model/removeLista.php">
+                            <td><button type="submit" id="remover" name="remover" value="<?php echo $linha1['id'] ?>">Remover</button></td>
+                        </form>
                 <?php } while ($linha1 = mysqli_fetch_assoc($dados1));
                         } ?>
                 </table>
-
                 <!-Cacelados>
                     <h3 align="center">Agendamento cancelado</h3>
                     <table width="500" border="1" align="center">
@@ -106,7 +108,9 @@ $total2 = mysqli_num_rows($dados2);
                             <td width="35%" align="center">
                                 <font color="red"><strong>Cancelado</strong></font>
                             </td>
-                            <td> <button type="submit" id="cadastrar" name="cadastrar">Restaurar</button></td>
+                            <form method="post" name="restaurar" id="restaurar" action="../Model/restauraLista.php">
+                                <td><button type="submit" id="restaurar" name="restaurar" value="<?php echo $linha2['id'] ?>">Restaurar</button></td>
+                            </form>
                     <?php } while ($linha2 = mysqli_fetch_assoc($dados2));
                             } ?>
                     </table>
@@ -122,6 +126,7 @@ $total2 = mysqli_num_rows($dados2);
                     <p align="center">Para ficar por dentro dos dias de gira entre no nosso grupo do <a href="https://chat.whatsapp.com/EnMinN5c1uC57q3m0J6nrU" target="_blank">WhatsApp</a>.</p>
                     <p align="center">Instagram: <a href="https://www.instagram.com/tendaespiritapaiclemente/" target="_blank">@tendaespiritapaiclemente</a></p>
                     <p align="center">TEPC | Tenda Espírita Pai Clemente | Site: <a href="https://tepc.com.br" target="_blank">www.tepc.com.br</a></p>
+                    <hr width="100%">
 
 </body>
 

@@ -62,7 +62,7 @@ $total2 = mysqli_num_rows($dados2);
                 <?php if ($total > 0) { ?>
                     <?php do { ?>
                         <tr>
-                            <td width="65%" align="center"><?php echo $linha['nomecompleto'] ?></td>
+                            <td width="65%" align="center"><?php echo $linha['nomecompleto']?></td>
                             <td width="35%" align="center">
                                 <font color="green"><strong>Confirmado</strong></font>
                             </td>

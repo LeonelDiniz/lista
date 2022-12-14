@@ -41,7 +41,7 @@ $total2 = mysqli_num_rows($dados2);
         <br>
         <hr width="90%">
         <br>
-        <form align="center" method="post" name="form1" id="form1" action="../Model/insereLista.php">
+        <form align="center" method="post" name="form1" id="form1" action="../Model/insereListaAdm.php">
             <label for="fname">
                 <font color="blue"><strong>Informe seu nome completo:</strong></font>
             </label>

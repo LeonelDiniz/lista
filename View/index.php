@@ -35,7 +35,7 @@ $total2 = mysqli_num_rows($dados2);
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">TEPC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,21 +44,20 @@ $total2 = mysqli_num_rows($dados2);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Site da Tenda</a>
+                        <a class="nav-link" href="https://tepc.com.br" target="_blank">Site da Tenda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dúvidas sobre as giras</a>
+                        <a class="nav-link" href="https://tepc.com.br/atendimento/" target="_blank">Dúvidas sobre as giras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Grupo WhatsApp</a>
+                        <a class="nav-link" href="https://chat.whatsapp.com/EnMinN5c1uC57q3m0J6nrU" target="_blank">Grupo WhatsApp</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Localização</a>
+                        <a class="nav-link" href="https://waze.com/ul/h6vjve7yps" target="_blank">Localização</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Instagram</a>
+                        <a class="nav-link" href="https://www.instagram.com/tendaespiritapaiclemente/" target="_blank">Instagram</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -68,16 +67,12 @@ $total2 = mysqli_num_rows($dados2);
         <h1>Tenda Espírita Pai Clemente</h1>
 
         <p>Para participar da gira você precisa se cadastrar abaixo:</p>
-
-        <p>Menores de 18 anos somente com a presença de um responável. Mais informações clique aqui.</p>
-
-        <p>Em caso desistência favor informar no WhatsApp para retirar no nome da lista e dar o lugar para quem está na lista de espera.</p>
-
-        <p>QS 14 Lote D Loja 05 Riacho Fundo I. Ed Continental Center - Atrás do supermercado Caíque. | Como chegar: Waze
+        <p>Menores de 18 anos somente com a presença de um responável. Mais informações <a href="https://tepc.com.br/atendimento/" target="_blank">clique aqui.</a></p>
+        <p><strong>Em caso desistência favor informar</strong> no <a href="https://chat.whatsapp.com/EnMinN5c1uC57q3m0J6nrU" target="_blank">WhatsApp</a> para retirar no nome da lista e dar o lugar para quem está na lista de espera.</p>
+        <p>QS 14 Lote D Loja 05 Riacho Fundo I. Ed Continental Center - Atrás do supermercado Caíque. | Como chegar: <a href="https://waze.com/ul/h6vjve7yps" target="_blank">Waze</a>
         </p>
     </div>
     <hr>
-
     <br><br>
     <div align="center" class="container">
         <form method="post" name="form1" id="form1" action="../Model/insereLista.php">
@@ -86,15 +81,12 @@ $total2 = mysqli_num_rows($dados2);
                 <input type="text" class="form-control" maxlength="50" id="fname" name="fname" placeholder="Informe seu nome completo">
                 <div id="emailHelp" class="form-text">O 17º entrará para a lista de espera.</div>
             </div>
-
             <button type="submit" class="btn btn-success">Agendar atendimento</button>
         </form>
         <br><br>
     </div>
-
-    
-        <!--Início Lista Principal-->
-        <div align="center" class="container">
+    <!--Início Lista Principal-->
+    <div align="center" class="container">
         <h3>#Lista Principal</h3>
         <table class="table table-bordered text-center">
             <thead>
@@ -104,7 +96,7 @@ $total2 = mysqli_num_rows($dados2);
                     <!--<th scope="col">Ação</th>-->
                 </tr>
                 <tr>
-                <!--PHP-->
+                    <!--PHP-->
                     <?php if ($total > 0) { ?>
                         <?php do { ?>
             </thead>
@@ -128,11 +120,11 @@ $total2 = mysqli_num_rows($dados2);
         </tr>
             </tbody>
         </table>
-        </div>
-        <!--Fim Lista Principal-->
-                    <br><br>
-        <!--Início Lista de Espera-->
-        <div align="center" class="container">
+    </div>
+    <!--Fim Lista Principal-->
+    <br><br>
+    <!--Início Lista de Espera-->
+    <div align="center" class="container">
         <h3>#Em espera</h3>
         <table class="table table-bordered text-center">
             <thead>
@@ -142,7 +134,7 @@ $total2 = mysqli_num_rows($dados2);
                     <!--<th scope="col">Ação</th>-->
                 </tr>
                 <tr>
-                <!--PHP-->
+                    <!--PHP-->
                     <?php if ($total1 > 0) { ?>
                         <?php do { ?>
             </thead>
@@ -167,7 +159,6 @@ $total2 = mysqli_num_rows($dados2);
             </tbody>
         </table>
         <!--Fim Lista de Espera-->
-
         <br><br>
         <!--Início Agendamento cancelado-->
         <h3>#Agendamento cancelado</h3>
@@ -179,7 +170,7 @@ $total2 = mysqli_num_rows($dados2);
                     <!--<th scope="col">Ação</th>-->
                 </tr>
                 <tr>
-                <!--PHP-->
+                    <!--PHP-->
                     <?php if ($total2 > 0) { ?>
                         <?php do { ?>
             </thead>
@@ -204,21 +195,15 @@ $total2 = mysqli_num_rows($dados2);
             </tbody>
         </table>
         <!--Fim Agendamento cancelado-->
-
-
     </div>
     <br><br><br>
     <hr>
     <div align="center" class="container">
         <i class="fa-solid fa-location-dot"></i>
         <p>Endereço: QS 14 Lote D Loja 05 Riacho Fundo I. Ed Continental Center - Atrás do supermercado Caíque. | Como chegar: Waze</p>
-
         <p>Para ficar por dentro dos dias de gira entre no nosso grupo do WhatsApp.</p>
-
         <p>Instagram: @tendaespiritapaiclemente</p>
-
-        <p>TEPC | Tenda Espírita Pai Clemente | Site: www.tepc.com.br</p>
-
+        <p>TEPC | Tenda Espírita Pai Clemente | www.tepc.com.br</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

@@ -96,6 +96,7 @@ $total2 = mysqli_num_rows($dados2);
                     <th width="65%">Nome completo</th>
                     <th scope="col">Status</th>
                     <th scope="col">Ação</th>
+                    <th scope="col">Check</th>
                 </tr>
                 <tr>
                     <!--PHP-->
@@ -113,6 +114,9 @@ $total2 = mysqli_num_rows($dados2);
                         <button type="submit" id="remover" name="remover" class="btn btn-danger" value="<?php echo $linha['id'] ?>">Remover</button>
                     </form>
                 </td>
+                <td><form method="post" name="confirmado" id="confirmado" action="../Model/confirmaLista.php">
+                        <button type="submit" id="confirmado" name="confirmado" class="btn btn-primary" value="<?php echo $linha['id'] ?>">Confirmar</button>
+                    </form></td>
                 <!--PHP-->
         <?php } while ($linha = mysqli_fetch_assoc($dados));
                         // tira o resultado da busca da memória

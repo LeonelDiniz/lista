@@ -107,7 +107,7 @@ $total2 = mysqli_num_rows($dados2);
             </thead>
             <tbody>
                 <!--PHP-->
-                <td><strong><?php echo $linha['nomecompleto'] ?></strong></td>
+                <td class="text-uppercase"><strong><?php echo $linha['nomecompleto'] ?></strong></td>
                 <td>
                     <font color="green"><strong><?php echo substr($linha['confirmado'], -8) ?></strong></font>
                 </td>
@@ -147,7 +147,7 @@ $total2 = mysqli_num_rows($dados2);
             </thead>
             <tbody>
                 <!--PHP-->
-                <td><strong><?php echo $linha1['nomecompleto'] ?></strong></td>
+                <td class="text-uppercase"><strong><?php echo $linha1['nomecompleto'] ?></strong></td>
                 <td>
                     <font color="blue"><strong>Aguardando</strong></font>
                 </td>
@@ -183,7 +183,7 @@ $total2 = mysqli_num_rows($dados2);
             </thead>
             <tbody>
                 <!--PHP-->
-                <td><strong><?php echo $linha2['nomecompleto'] ?></strong></td>
+                <td class="text-uppercase"><strong><?php echo $linha2['nomecompleto'] ?></strong></td>
                 <td>
                     <font color="red"><strong>Cancelado</strong></font>
                 </td>

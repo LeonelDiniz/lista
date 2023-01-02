@@ -6,7 +6,7 @@ $confirmado = $_POST['confirmado'];
 if ($confirmado  == "" || $confirmado  == null) {
   echo "<script language='javascript' type='text/javascript'>alert('Erro ao fazer GET no id');
     window.location.href='/lista/View/admin.php';</script>";
-} else {
+ } else {
   $query = "UPDATE listagira SET confirmado = CURRENT_TIMESTAMP WHERE id = $confirmado";
   $insert = mysqli_query($link, $query);
 

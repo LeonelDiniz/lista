@@ -8,7 +8,9 @@ if ($remover == "" || $remover == null) {
     window.location.href='/lista/View/admin.php';</script>";
 } else {
   $query = "UPDATE listagira SET STATUS = 1 WHERE id = $remover";
+  $query1 = "UPDATE listagira SET confirmado = NULL WHERE id = $remover";
   $insert = mysqli_query($link, $query);
+  $insert1 = mysqli_query($link, $query1);
 
   if ($insert) {
     echo "<script language='javascript' type='text/javascript'>alert('Removido com sucesso!');
